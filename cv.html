@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Currículum Vitae - [Tu Nombre]</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <header>
+    <img src="ernesto.jpg" alt="Foto de perfil">
+    <h1>Ernesto Federico Rubiolo</h1>
+    <p>"Servicio técnico de páginas web, automatización en WhatsApp Business, gestión en Google Drive."</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#personal">Datos Personales</a></li>
+      <li><a href="#experiencia">Experiencia</a></li>
+      <li><a href="#habilidades">Habilidades</a></li>
+      <li><a href="#educacion">Educación</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+  <div id="idiomas">
+    <a href="cv.html">
+        <img src="español.jpg" alt="Español" width="50" height="25"> 
+    </a>
+    <a href="index.html">
+        <img src="ingles.png" alt="English" width="50" height="25"> 
+    </a>
+</div>
+<main>
+  <section id="personal">
+    <h2>Datos Personales</h2>
+    <ul>
+      <li>Nombre y Apellido: Ernesto Federico Rubiolo</li>
+      <li>Edad: 36 años</li>
+      <li>Correo: rubioloernesto06@gmail.com</li>
+      <li>Teléfono: +5491130613999</li>
+      <li>Ubicación: Capital Federal, Buenos Aires, Argentina</li>
+    </ul>
+  </section>
+
+  <section id="experiencia">
+    <h2>Experiencia Laboral</h2>
+    <ul>
+      <li>Servicio técnico de páginas web</li>
+      <li>Conexión con WhatsApp Business y conversación AI</li>
+      <li>Automatización de reservas en Google Sheets desde WhatsApp</li>
+      <li>Publicación de tiendas online en Facebook e Instagram</li>
+      <li>Facturación digital automática a clientes y proveedores</li>
+    </ul>
+  </section>
+
+  <section id="habilidades">
+    <h2>Habilidades</h2>
+    <ul>
+      <li>Desarrollo web: HTML, CSS, JavaScript</li>
+      <li>Automatización y scripts: Google Apps Script para Google Drive, Gmail, Sheets, Sites, y Documentos</li>
+      <li>Conexión y automatización de WhatsApp para empresas</li>
+      <li>Gestión y actualización de inventarios en Google Sheets</li>
+      <li>Diseño de sistemas de información que manejan datos y cálculos de proveedores</li>
+    </ul>
+    <p>
+      Soy de Argentina y tengo gran entusiasmo por trabajar online, utilizando herramientas modernas y soluciones automatizadas para negocios.
+      Mi disponibilidad es de 4 horas diarias, de lunes a viernes, en horarios flexibles: mañana, tarde, o noche.
+    </p>
+    <p>
+      Estoy preparado para construir soluciones completas para tu página web, listas en 1 a 2 meses, con automatización completa que te permitirá administrar inventarios, clientes y proveedores de forma fácil, sin moverte de casa. Me encargaré de todo a través de sistemas de IA.
+    </p>
+  </section>
+  
+
+  <section id="educacion">
+    <h2>Educación</h2>
+    <ul>
+      <li>Título Secundario Completo</li>
+      <li>Estudios Terciarios (incompletos)</li>
+    </ul>
+  </section>
+
+  <section id="contactos">
+    <h2>Enviar WhatsApp</h2>
+    <form id="whatsappForm">
+        <div class="form-group">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" required>
+        </div>
+        <div class="form-group">
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" required>
+        </div>
+        <div class="form-group">
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" required>
+        </div>
+        <div class="form-group">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" required>
+        </div>
+        <div class="form-group">
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" required></textarea>
+        </div>
+        <button type="submit">Enviar WhatsApp</button>
+    </form>
+    <div id="map">
+        <h3>Nuestra Ubicación</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31510.401138211845!2d-58.431779!3d-34.616427!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a335eaf2b8f14b%3A0xf5bb0f4c88f6c1dc!2sVilla%20Crespo%2C%20CABA!5e0!3m2!1ses!2sar!4v1632745261741!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+</section>
+</main>
+  <footer>
+    <p>&copy;2024 - Todos los derechos reservados.</p>
+    <p><a href="#personal">Volver arriba</a></p>
+  </footer>
+  <script>
+    document.getElementById('whatsappForm').addEventListener('submit', function(event) {
+ event.preventDefault(); // Prevent form submission
+ 
+ // Get input values
+ const nombre = document.getElementById('nombre').value;
+ const apellido = document.getElementById('apellido').value;
+ const mensaje = document.getElementById('mensaje').value;
+
+ // Formatted WhatsApp message
+ const formattedMessage = `Sr/Sra ${nombre} ${apellido}, ${mensaje}`;
+ 
+ // WhatsApp URL, always sending to +5491130613999
+ const whatsappUrl = `https://wa.me/5491130613999?text=${encodeURIComponent(formattedMessage)}`;
+ 
+ // Redirect to WhatsApp link
+ window.location.href = whatsappUrl;
+});
+
+ </script>
+</body>
+</html>

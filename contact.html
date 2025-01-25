@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Currículum Vitae - [Tu Nombre]</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <header>
+    <img src="ernesto.jpg" alt="Foto de perfil">
+    <h1>Ernesto Federico Rubiolo</h1>
+    <p>"Technical service for websites, WhatsApp Business automation, Google Drive management."</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="cv.html">Personal Information</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  <div id="idiomas">
+    <a href="cv.html">
+        <img src="español.jpg" alt="Español" width="50" height="25"> 
+    </a>
+    <a href="index.html">
+        <img src="ingles.png" alt="English" width="50" height="25"> 
+    </a>
+</div>
+<main>
+    <section id="contacts">
+        <h2>Send WhatsApp Message</h2>
+        <form id="whatsappForm">
+            <div class="form-group">
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" required>
+            </div>
+            <div class="form-group">
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" required></textarea>
+            </div>
+            <button type="submit">Send WhatsApp Message</button>
+        </form>
+        <div id="map">
+            <h3>Our Location</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31510.401138211845!2d-58.431779!3d-34.616427!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a335eaf2b8f14b%3A0xf5bb0f4c88f6c1dc!2sVilla%20Crespo%2C%20CABA!5e0!3m2!1sen!2sar!4v1632745261741!5m2!1sen!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+    </main>
+    
+      <footer>
+        <p>&copy;2024 - All rights reserved.</p>
+        <p><a href="#personal">Back to top</a></p>
+      </footer>
+    
+      <script>
+        document.getElementById('whatsappForm').addEventListener('submit', function(event) {
+          event.preventDefault(); // Prevent form submission
+          
+          // Get input values
+          const firstName = document.getElementById('firstName').value;
+          const lastName = document.getElementById('lastName').value;
+          const message = document.getElementById('message').value;
+    
+          // Formatted WhatsApp message
+          const formattedMessage = `Hello ${firstName} ${lastName}, ${message}`;
+          
+          // WhatsApp URL, always sending to +5491130613999
+          const whatsappUrl = `https://wa.me/5491130613999?text=${encodeURIComponent(formattedMessage)}`;
+          
+          // Redirect to WhatsApp link
+          window.location.href = whatsappUrl;
+        });
+      </script>
+    </body>
+    </html>
